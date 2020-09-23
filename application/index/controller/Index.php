@@ -10,6 +10,6 @@ class Index
 
     public function hello($name = 'ThinkPHP5')
     {
-        return '王瑶,ss' . $name;
+        return '王瑶,ss555' . $name;
     }
 }
