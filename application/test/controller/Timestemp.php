@@ -8,11 +8,12 @@ class Timestemp
 {
     public function index ()
     {
-        return json([
-                'dsa'   => time(),
-                'dsad'  => date('Y:m:d H:i:s',time()),
-        ]
-        );
+        echo strtotime("2020-1-1 00:00:01");
+//        return json([
+//                'dsa'   => time(),
+//                'dsad'  => date('Y:m:d H:i:s',time()),
+//        ]
+//        );
     }
     /**
      * 根据客户端的时间信息得到发表的时间格式
@@ -45,8 +46,11 @@ class Timestemp
                 $formate = 'Y-m-d H:i';
             }
             return date($formate,$recordtime);
-        } elseif($dayC == 1 || ($hourC < 24 && date('d',$recordtime) != date('d',$now))) {
+        } elseif ($dayC == 1 || ($hourC < 24 && date('d',$recordtime) != date('d',$now))) {
             $result = '昨天'.date('H:i',$recordtime);
+            return $result;
+        } elseif ($dayC==2||($hourC >= 24 && $hourC < 48)) {
+            $result = "前天".date('H:i',$recordtime);
             return $result;
         } elseif ($dayC>1) {
             $formate = 'm-d H:i';
