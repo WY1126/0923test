@@ -8,12 +8,11 @@ class Timestemp
 {
     public function index ()
     {
-        echo strtotime("2020-1-1 00:00:01");
-//        return json([
-//                'dsa'   => time(),
-//                'dsad'  => date('Y:m:d H:i:s',time()),
-//        ]
-//        );
+        return json([
+                'dsa'   => time(),
+                'dsad'  => date('Y:m:d H:i:s',time()),
+        ]
+        );
     }
     /**
      * 根据客户端的时间信息得到发表的时间格式
