@@ -8,6 +8,6 @@ class People
 {
     public function sell()
     {
-        echo 'dsada';
+        echo 'dsda';
     }
 }
